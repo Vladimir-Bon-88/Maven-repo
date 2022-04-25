@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService{
     public void addToFile(User user) {
         Optional<User> userOptional = userRepository.getById(user.getId());
         if(userOptional.isPresent()){
-            throw new UserAlreadyExistException("User already exist");
+            throw new UserAlreadyExistException("User by " + user.getId() + " already exist");
         }
         userRepository.addToFile(user);
     }
@@ -28,13 +28,12 @@ public class UserServiceImpl implements UserService{
     public void remove(User user) {
         Optional<User> userOptional = userRepository.getById(user.getId());
         if(userOptional.isEmpty()){
-            throw new UserNotExistException("User not exist");
+            throw new UserNotExistException("User by " + user.getId() + " not exist");
         }
         userRepository.remove(user);
     }
 
     @Override
-    // TODO: Add Id information
     public User getById(int id) {
         //Optional<User> userOptional = userRepository.getById(id);
         /*if(userOptional.isEmpty()){
@@ -42,7 +41,7 @@ public class UserServiceImpl implements UserService{
         }
         return userOptional.get();*/
         return userRepository.getById(id)
-                .orElseThrow(() -> new UserNotExistException("User not exist"));
+                .orElseThrow(() -> new UserNotExistException("User by " + id + " not exist"));
     }
 
     @Override
