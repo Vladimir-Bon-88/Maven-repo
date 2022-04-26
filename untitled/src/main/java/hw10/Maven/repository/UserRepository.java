@@ -1,7 +1,7 @@
-package repository;
+package hw10.Maven.repository;
 
-import model.User;
-import utils.Utils;
+import hw10.Maven.utils.Utils;
+import hw10.Maven.model.User;
 
 import java.io.*;
 import java.util.ArrayList;

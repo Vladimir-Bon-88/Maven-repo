@@ -1,6 +1,6 @@
-package service;
+package hw10.Maven.service;
 
-import model.User;
+import hw10.Maven.model.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package utils;
+package hw10.Maven.utils;
 
 import com.sun.tools.javac.Main;
 

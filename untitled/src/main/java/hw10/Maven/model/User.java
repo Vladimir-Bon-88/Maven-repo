@@ -1,4 +1,4 @@
-package model;
+package hw10.Maven.model;
 
 import java.util.Objects;
 

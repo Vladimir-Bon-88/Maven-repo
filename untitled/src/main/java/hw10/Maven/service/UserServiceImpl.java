@@ -1,9 +1,9 @@
-package service;
+package hw10.Maven.service;
 
-import exceptions.UserAlreadyExistException;
-import exceptions.UserNotExistException;
-import model.User;
-import repository.UserRepository;
+import hw10.Maven.exceptions.UserAlreadyExistException;
+import hw10.Maven.exceptions.UserNotExistException;
+import hw10.Maven.model.User;
+import hw10.Maven.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
